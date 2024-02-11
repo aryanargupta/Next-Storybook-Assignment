@@ -98,6 +98,8 @@ export default function Charts() {
             width: "fit-content",
             marginLeft: "auto",
             marginRight: "auto",
+            backgroundColor: "white",
+            color: "black",
           }}
         >
           <Typography
@@ -106,6 +108,7 @@ export default function Charts() {
               fontSize: "20px",
               fontWeight: "500",
               marginBottom: "20px",
+              fontFamily: "Roboto",
             }}
           >
             Camera Health
@@ -161,6 +164,7 @@ export default function Charts() {
                     sx={{
                       fontSize: "16px",
                       fontWeight: "600",
+                      fontFamily: "Roboto",
                     }}
                   >
                     124

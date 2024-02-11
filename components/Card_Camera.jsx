@@ -3,6 +3,9 @@ import React from "react";
 import PropTypes from "prop-types";
 import Head from "next/head";
 import Typography from "@mui/material/Typography";
+import Image from "next/image";
+import cardCameraImage from "../assets/card_camera_image.jpg";
+import cardCameraImageOverlay from "../assets/card_camera_image_overlay.jpg";
 
 const cardStyle = {
   width: 348,
@@ -30,9 +33,9 @@ const imageStyle = {
 };
 
 const overlayImageStyle = {
-  position: "absolute",
-  top: 20,
-  left: 150,
+  position: "relative",
+  top: "-100%",
+  left: "40%",
   width: "5em",
   height: "5em",
   objectFit: "cover",
@@ -94,14 +97,7 @@ const iconContainerStyle = {
   marginRight: "12px",
 };
 
-const CardCamera = ({
-  imageSrc,
-  overlayImageSrc,
-  title,
-  recipes,
-  detection,
-  location,
-}) => {
+const CardCamera = ({ title, recipes, detection, location }) => {
   return (
     <>
       <Head>
@@ -112,9 +108,13 @@ const CardCamera = ({
       </Head>
       <div style={cardStyle}>
         <div style={imageContainerStyle}>
-          <img src={imageSrc} alt="Camera Feed" style={imageStyle} />
+          <Image src={cardCameraImage} alt="Camera Feed" style={imageStyle} />
           {/* Add the overlay image */}
-          <img src={overlayImageSrc} alt="Overlay" style={overlayImageStyle} />
+          <Image
+            src={cardCameraImageOverlay}
+            alt="Overlay"
+            style={overlayImageStyle}
+          />
         </div>
         <div style={contentContainerStyle}>
           <Typography variant="subtitle1" style={titleStyle} gutterBottom>
@@ -218,7 +218,7 @@ const CardCamera = ({
                   viewBox="0 0 24 24"
                 >
                   <path
-                    fill="currentColor"
+                    fill="black"
                     d="M18 9c0-1.103-.897-2-2-2h-1.434l-2.418-4.029A2.008 2.008 0 0 0 10.434 2H5v2h5.434l1.8 3H4c-1.103 0-2 .897-2 2v9c0 1.103.897 2 2 2h12c1.103 0 2-.897 2-2v-3l4 2v-7l-4 2zm-1.998 9H4V9h12l.001 4H16v1l.001.001z"
                   />
                   <path fill="currentColor" d="M6 14h6v2H6z" />
@@ -240,7 +240,7 @@ const CardCamera = ({
                   viewBox="0 0 24 24"
                 >
                   <path
-                    fill="currentColor"
+                    fill="black"
                     d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2M9 17H7v-7h2zm4 0h-2V7h2zm4 0h-2v-4h2z"
                   />
                 </svg>

@@ -35,12 +35,12 @@ const manageStyle = {
   marginRight: 30,
   fontFamily: "Roboto",
   marginBottom: 8,
-  border: "none",
-  background: "none",
-  textDecoration: "none",
-  transition: "color 0.3s",
-  fontFamily: "Roboto",
-  alignSelf: "flex-end",
+  border: 'none',
+  background: 'none',
+  textDecoration: 'none',
+  transition: 'color 0.3s',
+  fontFamily: 'Roboto',
+  alignSelf: 'flex-end',
 };
 
 const CardManage = ({ title }) => {

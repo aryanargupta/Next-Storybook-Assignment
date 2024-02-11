@@ -108,7 +108,7 @@ function Page() {
                 padding: "10px 24px",
                 border: "1.4px solid #333",
                 "&:hover": {
-                  backgroundColor: "#D3D3D3",
+                  backgroundColor: "#EFEFEF",
                   color: "#000000",
                 },
               }}
