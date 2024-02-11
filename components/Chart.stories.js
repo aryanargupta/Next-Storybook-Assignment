@@ -3,7 +3,6 @@ import Charts from "./Chart";
 export default {
   component: Charts,
   title: "components/Charts",
-  tags: ["autodocs"],
 };
 
 export const Default = {
